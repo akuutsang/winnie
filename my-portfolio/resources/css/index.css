@@ -3,14 +3,19 @@
   margin: 0;
   background-color: black;
   color: white;
+  text-decoration: none;
 }
 
-
-.header{
+.header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   height: 80px;
   width: 100vw;
-  background-color: antiquewhite;
+}
+
+.logo {
+  font-family: dancing script, sans-serif;
+  font-size: 40px;
 }
