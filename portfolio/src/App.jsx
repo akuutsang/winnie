@@ -7,14 +7,14 @@ function App() {
     <>
       <div>
         <section>
-          <Navbar />
+          <Navbar id="Homepage" />
         </section>
-        <section>Parallax</section>
+        <section id="Services">Parallax</section>
         <section>Services</section>
-        <section>Portfolio</section>
-        <section>Portfolio2</section>
-        <section>Portfolio3</section>
-        <section>Contact</section>
+        <section id="Portfolio">Portfolio</section>
+        <section id="Resume">Portfolio2</section>
+        <section id="Skills">Portfolio3</section>
+        <section id="Contact">Contact</section>
 
         {/* <Test />
         <Test /> */}
