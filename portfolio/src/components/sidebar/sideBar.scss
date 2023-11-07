@@ -20,7 +20,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            align-self: center;
+            align-items: center;
             justify-content: center;
             gap:20px;
 
@@ -42,6 +42,7 @@
         background-color: transparent;
         font-size: larger;
         border: none;
+        cursor: pointer;
     }
 
 }
