@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const variants = {
   open: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.5,
     },
   },
   closed: {
