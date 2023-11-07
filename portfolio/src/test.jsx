@@ -5,7 +5,7 @@ import { useState } from "react";
 export const Test = () => {
   const [open, setOpen] = useState(false);
   const variants = {
-    visible: { opacity: 1 },
+    visible: { opacity: 1, x: 1000, transition: { duration: 2 } },
     hidden: { opacity: 0 },
   };
   return (
