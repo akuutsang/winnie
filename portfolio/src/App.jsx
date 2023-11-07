@@ -20,6 +20,7 @@ function App() {
         <section>Contact</section> */}
 
         <Test />
+        <Test />
       </div>
     </>
   );
