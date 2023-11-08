@@ -40,6 +40,21 @@ const imgVariants = {
   },
 };
 
+const bgTextVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+    transition: {
+      duration: 20,
+      staggerChildren: 0.1,
+      repeat: Infinity,
+      repeatType: "mirror",
+    },
+  },
+};
+
 export const Hero = () => {
   return (
     <div className="hero">
@@ -77,7 +92,14 @@ export const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="slidingTextContainer">Akutsang</div>
+      <motion.div
+        className="slidingTextContainer"
+        variants={bgTextVariants}
+        initial="initial"
+        animate="animate"
+      >
+        web developer
+      </motion.div>
       <div className="imageContainer">
         <img src="/robot-removebg-preview.png" alt="" />
       </div>
