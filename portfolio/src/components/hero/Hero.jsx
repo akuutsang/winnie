@@ -16,6 +16,21 @@ const textVariants = {
   },
 };
 
+const imgVariants = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    y: -1,
+    opacity: 1,
+    transition: {
+      duration: 9,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export const Hero = () => {
   return (
     <div className="hero">
@@ -26,9 +41,17 @@ export const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Hello there!</motion.h2>
+          <div className="hello">
+            <motion.h2 variants={textVariants}>Hello there!</motion.h2>
+            <motion.img
+              className="helloImg"
+              src="/SpacyNDog.png"
+              alt=""
+              variants={imgVariants}
+            />
+          </div>
           <motion.h1 variants={textVariants}>
-            Welcome to my portfolio webpage
+            <p> Welcome to my portfolio webpage</p>
           </motion.h1>
           <div className="buttons">
             <motion.button variants={textVariants}>
@@ -44,7 +67,7 @@ export const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="slidingTextContainer">Akutsang</div>
+      {/* <div className="slidingTextContainer">Akutsang</div> */}
       <div className="imageContainer">
         <img src="/robot-removebg-preview.png" alt="" />
       </div>

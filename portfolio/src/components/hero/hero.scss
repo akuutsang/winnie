@@ -21,13 +21,23 @@
             gap: 40px;
         }
 
-        h2{
-            font-size: 30px;
-            color: rgb(50, 164, 230);
-            letter-spacing: 10px;
+        .hello{
+            display: flex;
+            align-items: center;
+            h2{
+                font-size: 30px;
+                color: rgb(50, 164, 230);
+                letter-spacing: 10px;
+            }
+            .helloImg{
+                width: 100px;
+            }
         }
+
+       
         h1{
             font-size: 88px;
+           
         }
 
         .buttons{
@@ -61,6 +71,7 @@
     .slidingTextContainer{
         position: absolute;
         font-size: 50vh;
+        font-family: dancing script;
         bottom: -70px;
         white-space: nowrap;
         color: #ffffff09;
