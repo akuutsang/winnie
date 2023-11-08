@@ -14,19 +14,28 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
 };
 
 const imgVariants = {
   initial: {
-    y: -100,
+    x: 100,
     opacity: 0,
   },
   animate: {
-    y: -1,
+    x: 1,
     opacity: 1,
     transition: {
-      duration: 9,
+      duration: 3,
       staggerChildren: 0.1,
+      repeat: Infinity,
     },
   },
 };
@@ -62,12 +71,13 @@ export const Hero = () => {
           <motion.img
             className="img"
             variants={textVariants}
+            animate="scrollButton"
             src="/Wscroll.webp"
             alt=""
           />
         </motion.div>
       </div>
-      {/* <div className="slidingTextContainer">Akutsang</div> */}
+      <div className="slidingTextContainer">Akutsang</div>
       <div className="imageContainer">
         <img src="/robot-removebg-preview.png" alt="" />
       </div>
