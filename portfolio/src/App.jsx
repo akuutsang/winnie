@@ -1,5 +1,6 @@
 import "./App.css";
 import "./app.scss";
+import { Hero } from "./components/hero/Hero";
 import { Navbar } from "./components/navbar/Navbar";
 // import { Test } from "./test";
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <div>
         <section>
           <Navbar id="Homepage" />
+          <Hero />
         </section>
         <section id="Services">Parallax</section>
         <section>Services</section>
