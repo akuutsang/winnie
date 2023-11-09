@@ -9,16 +9,16 @@
 
     h1{
         font-size: 100px;
-        z-index: 1;
     }
 
     .mountain{
-        background-image: url("/Mountain.jpeg");
+        background-image: url("/mountain.png");
         background-size: cover;
         background-position: bottom;
         width: 100%;
         height: 100%;
         position: absolute;
+        z-index: 2;
     }
     .astronauts{
         background-image: url("/astronauts.png");
@@ -27,36 +27,24 @@
         width: 10%;
         height: 20%;
         position: absolute;
-        top: 5px;
-        right: 90%;
+        top: 0%;
+        right: 70%;
     }
     .planet{
-        background-image: url("/planet.png");
+        background-image: url("/planets.png");
         background-size: cover;
         background-position: bottom;
-        width: 20%;
-        height: 20%;
+        width: 100%;
+        height: 100%;
         position: absolute;
-        top: 0px;
-        left: 80%;
     }
     .stars{
         background-image: url("/stars.png");
-        background-size: repeat;
-        background-position: bottom;
-        width: 100%;
-        height: 50%;
-        position: absolute;
-        top: 0% ;
-    }
-    .threeStars{
-        background-image: url("/stars.png");
         background-size: cover;
         background-position: bottom;
-        width: 40%;
-        height: 40%;
+        width: 100%;
+        height: 100%;
         position: absolute;
-        top: 10% ;
     }
-  
+    
 }

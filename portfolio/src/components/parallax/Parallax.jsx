@@ -10,9 +10,11 @@ export const Parallax = ({ type }) => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["-50%", "30%"]);
+  const yMountain = useTransform(scrollYProgress, [0, 1], ["0%", "90%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["-10%", "-100%"]);
+  const yStar = useTransform(scrollYProgress, [0, 1], ["-40%", "100%"]);
 
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   return (
     <div
       className="parallax"
@@ -26,11 +28,10 @@ export const Parallax = ({ type }) => {
       <motion.h1 style={{ y: yText }}>
         {type === "services" ? "What we do?" : "What we did"}
       </motion.h1>
-      <motion.div className="mountain"></motion.div>
+      <motion.div style={{ y: yMountain }} className="mountain"></motion.div>
       <motion.div style={{ y: yBg }} className="planet"></motion.div>
       <motion.div style={{ y: yBg }} className="astronauts"></motion.div>
-      <motion.div style={{ x: yBg }} className="stars"></motion.div>
-      <motion.div style={{ x: yBg }} className="threeStars"></motion.div>
+      <motion.div style={{ y: yStar }} className="stars"></motion.div>
     </div>
   );
 };
