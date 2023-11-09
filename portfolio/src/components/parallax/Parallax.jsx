@@ -1,8 +1,18 @@
 import "./parallax.scss";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 // eslint-disable-next-line react/prop-types
 export const Parallax = ({ type }) => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
   return (
     <div
       className="parallax"
@@ -10,15 +20,17 @@ export const Parallax = ({ type }) => {
         background:
           type === "services"
             ? "linear-gradient(180deg,   #111132,  #0c0c1d)"
-            : "linear-gradient(180deg,  #111132, #505064)",
+            : "linear-gradient(180deg,   #29297d, #030327, )",
       }}
     >
-      <h1>{type === "services" ? "What we do?" : "What we did"}</h1>
-      <div className="mountain"></div>
-      <div className="planet"></div>
-      <div className="astronauts"></div>
-      <div className="stars"></div>
-      <div className="threeStars"></div>
+      <motion.h1 style={{ y: yText }}>
+        {type === "services" ? "What we do?" : "What we did"}
+      </motion.h1>
+      <motion.div className="mountain"></motion.div>
+      <motion.div style={{ y: yBg }} className="planet"></motion.div>
+      <motion.div style={{ y: yBg }} className="astronauts"></motion.div>
+      <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      <motion.div style={{ x: yBg }} className="threeStars"></motion.div>
     </div>
   );
 };
