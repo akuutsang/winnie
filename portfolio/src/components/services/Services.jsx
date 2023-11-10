@@ -1,5 +1,6 @@
 import "./services.scss";
 import { motion } from "framer-motion";
+import ProjectsList from "../projectsLists/ProjectsList";
 export const Services = () => {
   return (
     <motion.div className="services">
@@ -13,50 +14,20 @@ export const Services = () => {
         <div className="title">
           <img src="/people.jpeg" alt="" />
           <h1>
-            <b>Smart ideas</b>
+            <b>Smart</b> ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <b>
-              For your <br /> Business
-            </b>
+            <b>For your</b> Business
           </h1>
           <button>WHAT WE DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer">
         <div className="box">
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia
-            suscipit, sunt obcaecati similique quae libero non amet nesciunt
-            accusamus.
-          </p>
-        </div>
-        <div className="box">
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia
-            suscipit, sunt obcaecati similique quae libero non amet nesciunt
-            accusamus.
-          </p>
-        </div>
-        <div className="box">
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia
-            suscipit, sunt obcaecati similique quae libero non amet nesciunt
-            accusamus.
-          </p>
-        </div>
-        <div className="box">
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia
-            suscipit, sunt obcaecati similique quae libero non amet nesciunt
-            accusamus.
-          </p>
+          <h2>Past Projects</h2>
+          <ProjectsList />
         </div>
       </motion.div>
     </motion.div>

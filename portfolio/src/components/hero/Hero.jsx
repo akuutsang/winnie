@@ -26,15 +26,15 @@ const textVariants = {
 
 const imgVariants = {
   initial: {
-    x: 100,
+    x: 400,
     opacity: 0,
   },
   animate: {
     x: 1,
     opacity: 1,
     transition: {
-      duration: 3,
-      staggerChildren: 0.1,
+      duration: 6,
+      // staggerChildren: 0.1,
       repeat: Infinity,
     },
   },
