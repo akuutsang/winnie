@@ -1,39 +1,32 @@
-import "./App.css";
 import "./app.scss";
 import { Hero } from "./components/hero/Hero";
 import { Navbar } from "./components/navbar/Navbar";
-import { Parallax } from "./components/parallax/Parallax";
-import ProjectsList from "./components/projectsLists/ProjectsList";
-import { Services } from "./components/services/Services";
-// import { Test } from "./test";
+import { About } from "./components/about/About";
+import { Skills } from "./components/skills/Skills";
+import Projects from "./components/projects/Projects";
+import { Contact } from "./components/contact/Contact";
+
 function App() {
   return (
     <>
-      <div>
-        <section>
-          <Navbar id="Homepage" />
+      <Navbar />
+      <main>
+        <section id="home">
           <Hero />
         </section>
-        <section id="Services">
-          {" "}
-          <Parallax type="services" />{" "}
+        <section id="about">
+          <About />
         </section>
-        <section>
-          <Services />
+        <section id="skills">
+          <Skills />
         </section>
-        {/* <section>
-          <ProjectsList />
-        </section> */}
-        <section id="Portfolio">
-          <Parallax type="portfolio" />
+        <section id="projects">
+          <Projects />
         </section>
-        <section id="Resume">Portfolio2</section>
-        <section id="Skills">Portfolio3</section>
-        <section id="Contact">Contact</section>
-
-        {/* <Test />
-        <Test /> */}
-      </div>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
     </>
   );
 }

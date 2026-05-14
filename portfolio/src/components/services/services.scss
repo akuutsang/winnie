@@ -20,7 +20,7 @@
         }
 
         hr{
-            width: 500px;
+            width: 300px;
             border: none;
             border-top: 0.5px solid gray;
         }
@@ -31,15 +31,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         .title{
             display: flex;
             align-items: center;
             gap: 20px;
         }
         img{
-            width: 200px;
-            height: 100px;
+            width: 150px;
+            height: 80px;
             border-radius: 50px;
             object-fit: cover;
         }
@@ -48,8 +48,8 @@
             font-weight: 100;
         }
         button{
-                width: 200px;
-                height: 100px;
+                width: 150px;
+                height: 80px;
                 border-radius: 50px;
                 background-color: orange;
                 border: none;
@@ -72,6 +72,7 @@
          h2{
            text-align: center;
            font-size: 40px;
+           padding: 10px 0px 20px 0px;
          }
 
     }

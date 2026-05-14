@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html{
     scroll-snap-type: mandatory;
     scroll-behavior: smooth;
@@ -6,13 +10,14 @@ html{
 *{
     padding: 0;
     margin: 0;
-    box-sizing:border-box ;
-    font-family: Montserat;
+    box-sizing:border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body{
-    background-color: #0c0c1d;
-    color: lightgray;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 a {
@@ -21,6 +26,21 @@ a {
 }
 
 section{
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: center;
+    position: relative;
+}
+
+@layer utilities {
+    .glass-card {
+        @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl;
+    }
+    
+    .text-glow {
+        text-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
+    }
+    
+    .cosmic-gradient {
+        background: linear-gradient(135deg, #9b59b6 0%, #3498db 50%, #00bcd4 100%);
+    }
 }
