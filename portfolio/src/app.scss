@@ -2,45 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-snap-type: mandatory;
-    scroll-behavior: smooth;
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
 }
 
-body{
-    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
-    color: #ffffff;
-    overflow-x: hidden;
+body {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #fff;
+  overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-section{
-    min-height: 100vh;
-    scroll-snap-align: center;
-    position: relative;
-}
-
-@layer utilities {
-    .glass-card {
-        @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl;
-    }
-    
-    .text-glow {
-        text-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
-    }
-    
-    .cosmic-gradient {
-        background: linear-gradient(135deg, #9b59b6 0%, #3498db 50%, #00bcd4 100%);
-    }
+section {
+  min-height: 100vh;
+  scroll-snap-align: center;
+  position: relative;
 }
