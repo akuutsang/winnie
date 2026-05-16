@@ -32,14 +32,14 @@ export const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-card py-4" : "py-6"
+        isScrolled ? " bg-[#110721]" : "py-2"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-6  h-[70px] flex items-center">
+        <div className="w-full flex items-center justify-between  ">
           {/* Logo */}
           <motion.div
             className="flex items-center gap-3"
@@ -71,8 +71,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-    
-
           {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 bg-white/10 rounded-lg"
@@ -80,7 +78,9 @@ export const Navbar = () => {
             whileTap={{ scale: 0.9 }}
           >
             <motion.span
-              animate={isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+              animate={
+                isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
+              }
               className="w-6 h-0.5 bg-white transition-all"
             />
             <motion.span
@@ -88,7 +88,9 @@ export const Navbar = () => {
               className="w-6 h-0.5 bg-white transition-all"
             />
             <motion.span
-              animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+              animate={
+                isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }
+              }
               className="w-6 h-0.5 bg-white transition-all"
             />
           </motion.button>
@@ -102,7 +104,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-card mt-4 mx-6 overflow-hidden"
+            className="md:hidden mt-4 mx-6 overflow-hidden rounded-2xl bg-[#1a0f2c]/95 backdrop-blur-xl border border-white/10 shadow-2xl"
           >
             <div className="flex flex-col py-6 gap-4">
               {navLinks.map((link, index) => (
@@ -121,8 +123,6 @@ export const Navbar = () => {
                   {link.name}
                 </motion.a>
               ))}
-              
-          
             </div>
           </motion.div>
         )}
