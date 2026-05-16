@@ -43,9 +43,9 @@ const floatingVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
 export const Hero = () => {
@@ -54,7 +54,11 @@ export const Hero = () => {
       {/* Animated stars background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-full h-full opacity-30">
-          <img src="/stars.png" alt="stars" className="w-full h-full object-cover animate-stars" />
+          <img
+            src="/stars.png"
+            alt="stars"
+            className="w-full h-full object-cover animate-stars"
+          />
         </div>
       </div>
 
@@ -64,10 +68,14 @@ export const Hero = () => {
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >
-        <img src="/planets.png" alt="planets" className="w-full h-full object-contain" />
+        <img
+          src="/planets.png"
+          alt="planets"
+          className="w-full h-full object-contain"
+        />
       </motion.div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 py-28 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <motion.div
@@ -76,11 +84,11 @@ export const Hero = () => {
             initial="initial"
             animate="animate"
           >
-            <motion.div 
+            <motion.div
               className="flex items-center justify-center lg:justify-start gap-4 mb-6"
               variants={textVariants}
             >
-              <motion.h2 
+              <motion.h2
                 className="text-2xl md:text-3xl font-semibold text-cosmic-cyan"
                 variants={textVariants}
               >
@@ -94,8 +102,8 @@ export const Hero = () => {
                 animate="animate"
               />
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-glow"
               variants={textVariants}
             >
@@ -105,15 +113,16 @@ export const Hero = () => {
               <br />
               <span className="text-white">Space Portfolio</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-lg sm:text-xl text-gray-300 mb-8 max-w-xl"
               variants={textVariants}
             >
-              I'm a creative developer exploring the digital universe. Let's build something extraordinary together among the stars.
+              I'm a creative developer exploring the digital universe. Let's
+              build something extraordinary together among the stars.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               variants={textVariants}
             >
@@ -170,8 +179,18 @@ export const Hero = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
             </svg>
           </motion.div>
         </div>
