@@ -13,7 +13,13 @@ export const Test = () => {
     hidden: { opacity: 0 },
   };
 
-  const items = ["item1", "item2", "item3", "item4"];
+  const items = 
+  [
+    "item1",
+    "item2",
+    "item3", 
+    "item4"
+  ];
 
   return (
     <div className="test">
