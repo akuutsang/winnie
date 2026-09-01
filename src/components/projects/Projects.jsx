@@ -2,25 +2,52 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Admin Dashboard",
-    description: "A comprehensive dashboard with real-time analytics and data visualization",
-    image: "/assets/adminDashboard.png",
-    tags: ["React", "Node.js", "MongoDB"],
-    link: "#",
+    title: "Puggle It Official Website",
+    description:
+      "PuggleIt Digital Solutions is a leading digital solutions provider, offering innovative web development and digital marketing services to help businesses thrive online.",
+    image: "/assets/puggleIt.jpg",
+    tags: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Tailwind CSS",
+      "firebase",
+    ],
+    link: "https://puggleit.com/",
   },
   {
-    title: "Sketch Pad",
-    description: "Creative drawing application with advanced tools and features",
-    image: "/assets/sketchPad.png",
-    tags: ["Canvas API", "JavaScript", "CSS"],
-    link: "#",
+    title: "cityreinigung-entrümpelung.de",
+    description:
+      "Cityreinigung-Entrümpelung.de is a professional cleaning and decluttering service website, offering efficient solutions for residential and commercial spaces.",
+    image: "/assets/city.jpg",
+    tags: [
+      "Canvas API",
+      "JavaScript",
+      "CSS",
+      "MongoDB",
+      "Express",
+      "Tailwind CSS",
+      "firebase",
+    ],
+    link: "https://www.xn--cityrein-entrmpelung-1ec.de/",
   },
+
   {
-    title: "Calculator App",
-    description: "Modern calculator with scientific functions and history",
-    image: "/assets/calculator.png",
-    tags: ["React", "Redux", "Tailwind"],
-    link: "#",
+    title: "Plateau State Government Official Website",
+    description:
+      "Plateau State Government current Official  Website with modern design",
+    image: "/assets/plateau.jpg",
+    tags: [
+      "React",
+      "Redux",
+      "Tailwind",
+      "MongoDB",
+      "Express",
+      "Tailwind CSS",
+      "firebase",
+    ],
+    link: "https://www.plateaustate.gov.ng/",
   },
   {
     title: "Capstone Project",
@@ -34,6 +61,14 @@ const projects = [
     description: "Pull Request System for efficient code review workflow",
     image: "/assets/prs.png",
     tags: ["TypeScript", "GitHub API", "React"],
+    link: "#",
+  },
+  {
+    title: "Sketch Pad",
+    description:
+      "Creative drawing application with advanced tools and features",
+    image: "/assets/sketchPad.png",
+    tags: ["Canvas API", "JavaScript", "CSS"],
     link: "#",
   },
 ];
@@ -51,7 +86,10 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen py-20 relative overflow-hidden">
+    <section
+      id="projects"
+      className="min-h-screen py-20 relative overflow-hidden"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-cosmic-blue/5 rounded-full blur-3xl" />
@@ -87,9 +125,9 @@ const Projects = () => {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.03,
-                boxShadow: "0 0 40px rgba(155, 89, 182, 0.4)"
+                boxShadow: "0 0 40px rgba(155, 89, 182, 0.4)",
               }}
             >
               <div className="relative overflow-hidden">
@@ -100,11 +138,15 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              
+
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{project.title}</h3>
-                <p className="text-gray-400 text-xs sm:text-sm mb-4">{project.description}</p>
-                
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 text-xs sm:text-sm mb-4">
+                  {project.description}
+                </p>
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
@@ -115,15 +157,25 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <motion.a
                   href={project.link}
                   className="inline-flex items-center gap-2 text-cosmic-cyan hover:text-white transition-colors text-sm"
                   whileHover={{ x: 5 }}
                 >
                   View Project
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </motion.a>
               </div>
